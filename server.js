@@ -10,8 +10,11 @@ const PORT = process.env.PORT || 5000;
 const corsOptions = {
   origin: [
     'http://localhost:3000',
-    'https://your-vercel-app.vercel.app', // Replace with your actual Vercel URL
-    /\.vercel\.app$/ // Allow all Vercel subdomains
+    'https://savedsync-mobile.vercel.app', // Your actual Vercel URL
+    /\.vercel\.app$/, // Allow all Vercel subdomains
+    // Add Chrome extension support
+    /^chrome-extension:\/\/.*$/,
+    /^moz-extension:\/\/.*$/
   ],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
